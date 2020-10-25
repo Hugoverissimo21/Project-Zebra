@@ -6,7 +6,7 @@
 extern "C" void ut_read_os_version_index();
 extern "C" int ut_os_version_index;
 
-#define RES_PATH_REL "./ndless/ndless_resources.tns"
+#define RES_PATH_REL "./ndless_resources.tns"
 
 int main()
 {
