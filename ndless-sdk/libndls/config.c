@@ -173,6 +173,6 @@ void cfg_register_fileext_file(const char *filepath, const char *ext, const char
 void cfg_register_fileext(const char *ext, const char *prgm) {
 	char path[300];
 	if (cfg_locate_cfg_file(path, sizeof(path)))
-		snprintf(path, sizeof(path), "%s%s", get_documents_dir(), "ndless/ndless.cfg.tns");
+		snprintf(path, sizeof(path), "%s%s", get_documents_dir(), "ndless.cfg.tns");
 	cfg_register_fileext_file(path, ext, prgm);
 }
