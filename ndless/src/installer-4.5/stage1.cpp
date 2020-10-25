@@ -20,7 +20,7 @@ int main()
 
         if (!res_fp)
 	{
-		syscall_local<e_disp_str, void>("ndless_resources not found.", &x, 0);
+		syscall_local<e_disp_str, void>("zebra_resources not found.", &x, 0);
 		return 0;
 	}
 
