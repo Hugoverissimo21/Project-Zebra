@@ -8,7 +8,7 @@ GENZEHN = genzehn
 
 GCCFLAGS = -Wall -Wextra -W -marm
 LDFLAGS = -Wl,-e,main,--gc-sections
-ZEHNFLAGS = --name "ndless_resources" --include-bss --uses-lcd-blit true --version 2016
+ZEHNFLAGS = --name "zebra_resources" --include-bss --uses-lcd-blit true --version 2016
 
 ifeq ($(DEBUG),FALSE)
 	GCCFLAGS += -Os
@@ -19,8 +19,8 @@ endif
 OBJS = $(patsubst %.c, %.o, $(shell find . -name \*.c))
 OBJS += $(patsubst %.cpp, %.o, $(shell find . -name \*.cpp))
 OBJS += $(patsubst %.S, %.o, $(shell find . -name \*.S))
-ZEHN = ndless_resources_zehn.tns
-EXE = ../../calcbin/ndless_resources.tns
+ZEHN = zebra_resources_zehn.tns
+EXE = ../../calcbin/zebra_resources.tns
 
 all: $(EXE)
 
