@@ -31,10 +31,10 @@ all: $(DISTDIR)/zebra_installer_4.5.0.tns
 %.bin: %.o
 	$(OBJCOPY) -O binary $^ $@
 
-payload: ndless_installer.bin
+payload: zebra_installer.bin
 	(../tools/MakeChunkDispatch/MakeChunkDispatch 0x1800e7f4 0x12480000; cat $^) | $(BASE64) > $@ || rm $@
 
-ndless_installer.elf: stage0.o stage1.o utils.o
+zebra_installer.elf: stage0.o stage1.o utils.o
 	$(LD) $(LFLAGS) $^ -o $@
 
 Problem1.xml: Problem1_top.xml payload Problem1_mid.xml Problem1_bot.xml
