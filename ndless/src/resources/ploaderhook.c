@@ -476,7 +476,7 @@ void plh_startup() {
 	if (!isKeyPressed(KEY_NSPIRE_ESC)) {
 		NU_Set_Current_Dir(get_documents_dir());
 		plh_isstartup = TRUE;
-		file_each("./ndless/startup", startup_file_each_cb, NULL);
+		file_each("./startup", startup_file_each_cb, NULL);
 		plh_isstartup = FALSE;
 	}
 	ins_install_successmsg_hook();
